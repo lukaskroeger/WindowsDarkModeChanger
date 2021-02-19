@@ -7,6 +7,6 @@ If you want to use the script, you need to know the coordinates of your place. T
 Now you should create a scheduled job, which starts the script at windows startup.
 Therefor excute the following commands in an admin powershell window:
 ```
-$trigger=New-JobTrigger -AtStartup
+$trigger=New-JobTrigger -AtLogon
 Register-ScheduledJob -Name WindowsDarkModeChanger -ScriptBlock {<PathToScript>/WindowsDarkModeChanger.ps1} -Trigger $trigger
 ```
